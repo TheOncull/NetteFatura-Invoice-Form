@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NetteFatura Invoice Form Example</title>
+    <style>
+      :root {
+        color: #233129;
+        background: #eef3ef;
+        font-family: Aptos, "Segoe UI", sans-serif;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+      }
+      main {
+        width: min(960px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 64px 0;
+      }
+      header {
+        max-width: 680px;
+        margin-bottom: 28px;
+      }
+      h1 {
+        margin: 0 0 10px;
+        font-size: clamp(30px, 5vw, 52px);
+        line-height: 1.04;
+        letter-spacing: -0.035em;
+      }
+      p {
+        color: #54635a;
+        font-size: 18px;
+      }
+      nettefatura-invoice-form {
+        --nf-accent: #16a765;
+        --nf-accent-strong: #087443;
+      }
+      details {
+        margin-top: 24px;
+      }
+      summary {
+        cursor: pointer;
+        font-weight: 700;
+      }
+      pre {
+        overflow: auto;
+        border-radius: 12px;
+        background: #17221c;
+        color: #d9fbe8;
+        padding: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Kurumsal fatura bilgileri</h1>
+        <p>
+          Bu örnek yalnızca tarayıcıdaki bileşen davranışını gösterir. Veriler
+          kaydedilmez veya gönderilmez.
+        </p>
+      </header>
+      <nettefatura-invoice-form></nettefatura-invoice-form>
+      <details>
+        <summary>Form çıktısını göster</summary>
+        <pre id="output">{}</pre>
+      </details>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

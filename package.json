@@ -1,0 +1,60 @@
+{
+  "name": "nettefatura-invoice-form",
+  "version": "0.1.0",
+  "description": "Framework-agnostic corporate invoice form for Turkish websites using NetteFatura.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheOncull/NetteFatura-Invoice-Form.git"
+  },
+  "homepage": "https://github.com/TheOncull/NetteFatura-Invoice-Form#readme",
+  "bugs": {
+    "url": "https://github.com/TheOncull/NetteFatura-Invoice-Form/issues"
+  },
+  "keywords": [
+    "nettefatura",
+    "invoice",
+    "web-component",
+    "turkey",
+    "e-invoice",
+    "e-archive"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "build": "vite build",
+    "docs:check": "node scripts/check-docs.mjs",
+    "lint": "eslint .",
+    "prepare": "vite build"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/nettefatura-invoice-form.umd.cjs",
+  "module": "./dist/nettefatura-invoice-form.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/nettefatura-invoice-form.js",
+      "require": "./dist/nettefatura-invoice-form.umd.cjs"
+    }
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.6",
+    "eslint": "^10.15.0",
+    "jsdom": "^31.0.1",
+    "prettier": "^3.10.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.72.2",
+    "vite": "^8.3.8",
+    "vite-plugin-dts": "^5.1.2",
+    "vitest": "^5.1.0"
+  }
+}
